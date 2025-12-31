@@ -1,0 +1,332 @@
+/* ===============================
+   MODERN ACCOUNTING PRESENTATION STYLES
+   Bright • Professional • Mobile Friendly
+================================ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap");
+
+/* ===============================
+   ACCOUNTING COLOR SYSTEM
+================================ */
+:root {
+  --primary: #1d4ed8;
+  --primary-dark: #1e3a8a;
+  --secondary: #0ea5e9;
+  --accent: #16a34a;
+
+  --success: #22c55e;
+  --warning: #facc15;
+  --danger: #ef4444;
+
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-accent: #1d4ed8;
+
+  --border: #cbd5e1;
+  --border-light: #e2e8f0;
+
+  --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
+  --gradient-accent: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 30px rgba(0, 0, 0, 0.15);
+
+  --font-primary: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.header-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+  z-index: 1000;
+}
+
+.subject-name {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* ===============================
+   PROGRESS BAR
+================================ */
+.progress-wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--border-light);
+  z-index: 1001;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gradient-accent);
+}
+
+/* ===============================
+   SLIDE CONTAINER
+================================ */
+.slide-container {
+  max-width: 1200px;
+  margin: 120px auto 2.5rem;
+  padding: 3rem;
+  background: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ===============================
+   TYPOGRAPHY
+================================ */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-accent);
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+}
+
+p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+/* ===============================
+   LABELS
+================================ */
+.label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(29, 78, 216, 0.1);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(29, 78, 216, 0.3);
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   TABLES (ACCOUNTING STYLE)
+================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+th {
+  background: var(--bg-secondary);
+  color: var(--primary-dark);
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+td {
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+tr:hover {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.85rem 2.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-next {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.btn-prev {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  margin: 1rem 0;
+}
+
+/* ===============================
+   LISTS
+================================ */
+.feature-list {
+  list-style: none;
+}
+
+.feature-list li {
+  padding-left: 2rem;
+  margin: 0.75rem 0;
+  position: relative;
+  font-size: 1rem;
+}
+
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+}
+
+/* ==================================================
+   📱 MOBILE RESPONSIVE (PHONE OPTIMIZED)
+================================================== */
+@media (max-width: 768px) {
+  .slide-container {
+    margin: 100px 1rem 1.5rem;
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .feature-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===============================
+   PRINT MODE (REPORT)
+================================ */
+@media print {
+  body {
+    background: white;
+  }
+
+  .navigation,
+  .progress-wrap {
+    display: none;
+  }
+
+  .slide-container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
